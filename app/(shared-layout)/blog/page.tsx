@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { connection } from "next/server";
 import { Metadata } from "next/types";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "博客 | Next.js 16 ",
@@ -25,9 +26,9 @@ const BlogPage = () => {
           来自团队的见解、思考与行业动态
         </p>
       </div>
-      {/* <Suspense fallback={<SkeletonLoadingUi />}> */}
+      <Suspense fallback={<SkeletonLoadingUi />}>
       <LoadingBlogList />
-      {/* </Suspense> */}
+      </Suspense>
     </div>
   );
 };
