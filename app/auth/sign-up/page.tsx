@@ -22,6 +22,7 @@ import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { z } from "zod";
 
 const SignUpPage = () => {
   const [isPending, startTransition] = useTransition();
